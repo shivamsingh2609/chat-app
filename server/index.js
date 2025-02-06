@@ -1,5 +1,5 @@
 import express from "express";
-// import dotenv from "dotenv";
+import dotenv from "dotenv";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import mongoose from "mongoose";
@@ -8,12 +8,12 @@ import contactsRoutes from "./routes/ContactRoutes.js";
 import messagesRoutes from "./routes/MessagesRoute.js";
 import setupSocket from "./socket.js";
 import channelRoutes from "./routes/ChannelRoutes.js";
-import dotenv from "dotenv"
+
 dotenv.config();
 
 const app = express();
 const port = process.env.PORT;
-const databaseURL = process.env.DATABASE_URL;
+const databaseURL = process.env.DATABSE_URL;
 
 app.use(
   cors({
